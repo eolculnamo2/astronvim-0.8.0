@@ -22,6 +22,15 @@ local astro_plugins = {
   ["ggandor/leap.nvim"] = {},
 
   -- Color Scheme
+  -- ["olivercederborg/poimandres.nvim"] = {
+  --   config = function()
+  --       require('poimandres').setup {
+  --       -- leave this setup function empty for default config
+  --       -- or refer to the configuration section
+  --       -- for configuration options
+  --     }
+  --   end,
+  -- },
 
   -- blamer (like gitlense)
   ["APZelos/blamer.nvim"] = {},
@@ -39,6 +48,7 @@ local astro_plugins = {
   -- Vim Be Good
   ["ThePrimeagen/vim-be-good"] = {},
 
+  ["elmcast/elm-vim"] = {},
   --
   -- Lua functions
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
