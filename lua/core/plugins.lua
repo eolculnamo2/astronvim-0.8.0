@@ -35,6 +35,9 @@ local astro_plugins = {
   -- blamer (like gitlense)
   ["APZelos/blamer.nvim"] = {},
 
+  -- Elm
+  ["ElmCast/elm-vim"] = {},
+
   --test
   ["vim-test/vim-test"] = {},
 
