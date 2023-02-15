@@ -38,6 +38,14 @@ local astro_plugins = {
   -- Elm
   ["ElmCast/elm-vim"] = {},
 
+  -- Duck!
+  ["tamton-aquib/duck.nvim"] = {
+    config = function()
+        vim.keymap.set('n', '<leader>dd', function() require("duck").hatch() end, {})
+        vim.keymap.set('n', '<leader>dk', function() require("duck").cook() end, {})
+    end,
+  },
+
   --test
   ["vim-test/vim-test"] = {},
 
