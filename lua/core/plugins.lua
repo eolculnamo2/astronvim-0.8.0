@@ -43,6 +43,8 @@ local astro_plugins = {
     config = function()
         vim.keymap.set('n', '<leader>dd', function() require("duck").hatch() end, {})
         vim.keymap.set('n', '<leader>dk', function() require("duck").cook() end, {})
+        vim.keymap.set('n', '<leader>dc', function() require("duck").hatch("🐈", 0.75) end, {}) 
+        vim.keymap.set('n', '<leader>dt', function() require("duck").hatch("🦖", 0.75) end, {}) 
     end,
   },
 
@@ -55,6 +57,9 @@ local astro_plugins = {
   ["anuvyklack/pretty-fold.nvim"] = {
     config = function() require('pretty-fold').setup() end,
   },
+
+  -- Vim Surround 
+  ["tpope/vim-surround"] = {},
 
   -- Vim Be Good
   ["ThePrimeagen/vim-be-good"] = {},
