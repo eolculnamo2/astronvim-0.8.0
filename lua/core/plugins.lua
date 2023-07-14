@@ -77,6 +77,10 @@ local astro_plugins = {
   ["hashivim/vim-terraform"] = {},
   -- Lightline
   ["itchyny/lightline.vim"] = {},
+  -- Haskell
+  ["mrcjkb/haskell-tools.nvim"] = {
+    requires = { { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' } },
+  },
   -- Flutter
   ["akinsho/flutter-tools.nvim"] = {
     requires = { { 'nvim-lua/plenary.nvim' } },
