@@ -1,6 +1,3 @@
--- local eslint = require("eslint")
--- local null_ls = require("null_ls")
--- null_ls.setup()
 local astro_plugins = {
   -- Plugin manager
   ["wbthomason/packer.nvim"] = {
@@ -62,6 +59,8 @@ local astro_plugins = {
   ["nvim-lua/plenary.nvim"] = { module = "plenary" },
   -- Plugin kotlin
   ["udalov/kotlin-vim"] = {},
+  -- Plugin PureScript
+  ["purescript-contrib/purescript-vim"] = {},
   -- Plugin ReScript
   ["rescript-lang/vim-rescript"] = {},
   -- Plugin Svelte
@@ -103,29 +102,29 @@ local astro_plugins = {
   -- Optimiser
   ["lewis6991/impatient.nvim"] = {},
   -- ESLint
-  ["MunifTanjim/eslint.nvim"] = {
-    setup = function()
-      eslint.setup({
-        bin = 'eslint', -- or `eslint_d`
-        code_actions = {
-          enable = true,
-          apply_on_save = {
-            enable = true,
-            types = { "directive", "problem", "suggestion", "layout" },
-          },
-          disable_rule_comment = {
-            enable = true,
-            location = "separate_line", -- or `same_line`
-          },
-        },
-        diagnostics = {
-          enable = true,
-          report_unused_disable_directives = false,
-          run_on = "type", -- or `save`
-        },
-      })
-    end
-  },
+  -- ["MunifTanjim/eslint.nvim"] = {
+  --   setup = function()
+  --     require("eslint").setup({
+  --       bin = 'eslint', -- or `eslint_d`
+  --       code_actions = {
+  --         enable = true,
+  --         apply_on_save = {
+  --           enable = true,
+  --           types = { "directive", "problem", "suggestion", "layout" },
+  --         },
+  --         disable_rule_comment = {
+  --           enable = true,
+  --           location = "separate_line", -- or `same_line`
+  --         },
+  --       },
+  --       diagnostics = {
+  --         enable = true,
+  --         report_unused_disable_directives = false,
+  --         run_on = "type", -- or `save`
+  --       },
+  --     })
+  --   end
+  -- },
   -- Indent detection
   ["Darazaki/indent-o-matic"] = {
     opt = true,
