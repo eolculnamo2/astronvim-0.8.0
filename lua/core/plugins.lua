@@ -1,3 +1,4 @@
+-- if packersync freezes, use command ulimit -S -n 200048
 local astro_plugins = {
   -- Plugin manager
   ["wbthomason/packer.nvim"] = {
@@ -31,8 +32,33 @@ local astro_plugins = {
   --   end,
   -- },
 
+
+
+  -- Neorg
+  ["nvim-neorg/neorg"] = {
+    run = ":Neorg sync-parsers",
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {},
+          ["core.concealer"] = {},
+          ["core.dirman"] = {
+            config = {
+              workspaces = {
+                work = "~/notes/work",
+                kast = "~/notes/kast",
+                home = "~/notes/home",
+              }
+            }
+          }
+        }
+      }
+    end,
+  },
   -- blamer (like gitlense)
   ["APZelos/blamer.nvim"] = {},
+  -- rust tools
+  ["simrat39/rust-tools.nvim"] = {},
   -- Elm
   ["ElmCast/elm-vim"] = {},
   -- Duck!
@@ -274,7 +300,7 @@ local astro_plugins = {
       "MasonUninstall",
       "MasonUninstallAll",
       "MasonLog",
-      "MasonUpdate",    -- astronvim command
+      "MasonUpdate", -- astronvim command
       "MasonUpdateAll", -- astronvim command
     },
     config = function()
