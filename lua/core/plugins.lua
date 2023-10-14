@@ -33,7 +33,9 @@ local astro_plugins = {
   -- },
 
 
-
+  ["stevearc/oil.nvim"] = {
+    config = function() require('oil').setup() end
+  },
   -- Neorg
   ["nvim-neorg/neorg"] = {
     run = ":Neorg sync-parsers",
@@ -48,7 +50,8 @@ local astro_plugins = {
                 work = "~/notes/work",
                 kast = "~/notes/kast",
                 home = "~/notes/home",
-              }
+              },
+              default_workspace = "work"
             }
           }
         }
@@ -300,7 +303,7 @@ local astro_plugins = {
       "MasonUninstall",
       "MasonUninstallAll",
       "MasonLog",
-      "MasonUpdate", -- astronvim command
+      "MasonUpdate",    -- astronvim command
       "MasonUpdateAll", -- astronvim command
     },
     config = function()
